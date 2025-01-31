@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.blood_management_system.RecipientDashboardController">
+   <children>
+      <Label layoutX="63.0" layoutY="164.0" text="Blood" />
+      <TextField fx:id="blood" layoutX="63.0" layoutY="181.0" prefHeight="25.0" prefWidth="187.0" styleClass="donor-login-input" stylesheets="@../../../styles/homepage.css" />
+      <Label layoutX="63.0" layoutY="215.0" text="Quantity" />
+      <TextField fx:id="quantity" layoutX="63.0" layoutY="232.0" prefHeight="25.0" prefWidth="187.0" styleClass="donor-login-input" stylesheets="@../../../styles/homepage.css" />
+      <Label layoutX="63.0" layoutY="272.0" text="Hospital" />
+      <TextField fx:id="hospital" layoutX="63.0" layoutY="289.0" prefHeight="25.0" prefWidth="187.0" styleClass="donor-login-input" stylesheets="@../../../styles/homepage.css" />
+      <Label layoutX="63.0" layoutY="321.0" text="My Contact" />
+      <TextField fx:id="contact" layoutX="63.0" layoutY="338.0" prefHeight="25.0" prefWidth="187.0" styleClass="donor-login-input" stylesheets="@../../../styles/homepage.css" />
+      <Label layoutX="66.0" layoutY="382.0" text="Required Date" />
+      <Label layoutX="67.0" layoutY="445.0" text="Disease" />
+      <TextField fx:id="disease" layoutX="67.0" layoutY="462.0" prefHeight="25.0" prefWidth="187.0" styleClass="donor-login-input" stylesheets="@../../../styles/homepage.css" />
+      <DatePicker fx:id="date" layoutX="67.0" layoutY="402.0" prefHeight="25.0" prefWidth="180.0" styleClass="donor-login-input" stylesheets="@../../../styles/homepage.css" />
+      <Button layoutX="158.0" layoutY="497.0" mnemonicParsing="false" onAction="#RequestAdd" prefHeight="25.0" prefWidth="96.0" styleClass="btn-danger" stylesheets="@../../../styles/homepage.css" text="Make Request" />
+      <Line endX="-100.0" endY="480.0" layoutX="424.0" layoutY="103.0" startX="-100.0" startY="-103.0" stroke="#c3c3c3" />
+      <TableView fx:id="table" layoutX="336.0" layoutY="48.0" prefHeight="216.0" prefWidth="425.0">
+        <columns>
+          <TableColumn fx:id="table_name" prefWidth="92.0" text="Donor Name" />
+          <TableColumn fx:id="table_blood" prefWidth="70.0" text="Blood" />
+            <TableColumn fx:id="table_age" prefWidth="69.0" text="Age" />
+            <TableColumn fx:id="table_mobile" prefWidth="96.0" text="Mobile" />
+            <TableColumn fx:id="table_gender" prefWidth="97.0" text="Gender" />
+        </columns>
+      </TableView>
+      <TextField fx:id="search" layoutX="336.0" layoutY="14.0" prefHeight="25.0" prefWidth="425.0" promptText="Search" />
+      <ImageView fitHeight="120.0" fitWidth="180.0" layoutX="97.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Abir%20Hasan/OneDrive/Documents/NetBeansProjects/Blood_Management_System/src/main/java/images/help.png" />
+         </image>
+      </ImageView>
+      <Text fill="#807f7f" layoutX="509.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Request Result" />
+      <TableView fx:id="search_req" layoutX="336.0" layoutY="336.0" prefHeight="216.0" prefWidth="425.0">
+         <columns>
+            <TableColumn fx:id="req_hospital" prefWidth="92.0" text="Hospital" />
+            <TableColumn fx:id="req_quantity" prefWidth="93.0" text="Quantity" />
+            <TableColumn fx:id="req_contact" prefWidth="90.0" text="Your Contact" />
+            <TableColumn fx:id="req_blood" prefWidth="52.0" text="Blood" />
+            <TableColumn fx:id="req_status" prefWidth="97.0" text="Status" />
+         </columns>
+      </TableView>
+      <TextField fx:id="search_request" layoutX="336.0" layoutY="302.0" prefHeight="25.0" prefWidth="425.0" promptText="Search" />
+      <Text fill="#807f7f" layoutX="484.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Blood Availability" />
+      <ImageView fitHeight="39.0" fitWidth="61.0" layoutX="11.0" layoutY="6.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Users/Abir%20Hasan/OneDrive/Documents/NetBeansProjects/Blood_Management_System/src/main/java/images/previous.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

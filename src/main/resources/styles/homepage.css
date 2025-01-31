@@ -1,0 +1,75 @@
+
+
+.bg-color{
+     -fx-background-color:#ff9e3;
+     -fx-text-fill: #ffffff;
+     
+}
+.btn-primary{
+     -fx-background-color:#0B5ED7;
+      -fx-text-fill: #ffffff;
+      -fx-cursor:hand;
+}
+.btn-success{
+     -fx-background-color:#157347;
+      -fx-text-fill: #ffffff;
+      -fx-cursor:hand;
+}
+.btn-danger{
+     -fx-background-color:#BB2D3B; 
+      -fx-text-fill: #ffffff;
+      -fx-cursor:hand;
+}
+.btn-warning{
+     -fx-background-color:#ffca2c;
+      -fx-text-fill: #ffffff;
+      -fx-cursor:hand;
+}
+.btn-info{
+     -fx-background-color:#31D2F2;
+     -fx-text-fill: #ffffff;
+     -fx-cursor:hand;
+}
+.btn-item{
+    -fx-background-color:blue;
+     -fx-text-fill: #ffffff;
+     -fx-cursor:hand;
+}
+.dashboard-box{
+    -fx-border-color:black;
+    -fx-border-width:1 ;
+    -fx-border-radius:3px;
+    -fx-background-color:#FBF5DF;
+}
+.donor-login-input{
+    -fx-background-radius:10px;
+   
+     -fx-control-inner-background: #FFF0F0 ;
+}
+
+.tab-pane {
+    -fx-background-color: #ffdbab;
+}
+.tab-pane .tab-header-area {
+    -fx-background-color: #b8fff8; 
+    -fx-padding: 5px; 
+}
+.tab-pane .tab-header-area .tab:hover {
+    -fx-background-color: #cce3e1; 
+}
+
+
+.tab-pane .tab-header-area .tab:selected {
+    -fx-background-color: #fa6e6e; 
+    -fx-border-color: #fff6f0; /* Border color for the selected tab */
+     -fx-text-fill: #ffffff;
+}
+
+.anchor-pane {
+    -fx-border-color: #007acc; 
+    -fx-border-width: 2px;
+    -fx-border-style: dotted; 
+    -fx-border-radius: 5px; 
+    -fx-background-color: #f4f4f4; 
+    -fx-padding: 10px;
+}

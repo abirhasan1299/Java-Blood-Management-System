@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="583.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.blood_management_system.AdminDashboardController">
+   <children>
+      <Label layoutX="289.0" layoutY="562.0" text="Made by Vital-JDK (IUBAT/2024)" textFill="#498586">
+         <font>
+            <Font name="Courier New Bold" size="12.0" />
+         </font>
+      </Label>
+      <TabPane layoutY="-7.0" prefHeight="553.0" prefWidth="755.0" stylesheets="@../../../styles/homepage.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dashboard">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="24.0" layoutY="20.0" prefHeight="205.0" prefWidth="282.0" styleClass="anchor-pane" stylesheets="@../../../styles/homepage.css">
+                           <children>
+                              <ImageView fitHeight="136.0" fitWidth="134.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/Abir%20Hasan/OneDrive/Documents/NetBeansProjects/Blood_Management_System/src/main/java/images/blood-donation.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#e14646" layoutX="171.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Donors">
+                                 <font>
+                                    <Font name="Cambria Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="total_donor" layoutX="194.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5000" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="418.0" layoutY="30.0" prefHeight="205.0" prefWidth="282.0" styleClass="anchor-pane" stylesheets="@../../../styles/homepage.css">
+                           <children>
+                              <ImageView fitHeight="136.0" fitWidth="134.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/Abir%20Hasan/OneDrive/Documents/NetBeansProjects/Blood_Management_System/src/main/java/images/help.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#e14646" layoutX="171.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Request">
+                                 <font>
+                                    <Font name="Cambria Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="total_request" layoutX="194.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5000" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="25.0" layoutY="267.0" prefHeight="205.0" prefWidth="282.0" styleClass="anchor-pane" stylesheets="@../../../styles/homepage.css">
+                           <children>
+                              <ImageView fitHeight="136.0" fitWidth="134.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/Abir%20Hasan/OneDrive/Documents/NetBeansProjects/Blood_Management_System/src/main/java/images/in-stock.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#e14646" layoutX="185.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Stock">
+                                 <font>
+                                    <Font name="Cambria Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="in_stock" layoutX="194.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5000" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="418.0" layoutY="267.0" prefHeight="205.0" prefWidth="282.0" styleClass="anchor-pane" stylesheets="@../../../styles/homepage.css">
+                           <children>
+                              <ImageView fitHeight="111.0" fitWidth="110.0" layoutX="14.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/Abir%20Hasan/OneDrive/Documents/NetBeansProjects/Blood_Management_System/src/main/java/images/most-recent.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fill="#e14646" layoutX="164.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recent Activity">
+                                 <font>
+                                    <Font name="Cambria Bold Italic" size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="190.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="None" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Request Overview">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="req_table" layoutX="14.0" layoutY="40.0" prefHeight="470.0" prefWidth="729.0">
+                          <columns>
+                            <TableColumn fx:id="req_need_blood" prefWidth="71.0" text="Need Blood" />
+                            <TableColumn fx:id="req_quantity" prefWidth="56.0" text="Quantity" />
+                              <TableColumn fx:id="req_hospital" prefWidth="122.0" text="Hospital" />
+                              <TableColumn fx:id="req_date" prefWidth="44.0" text="Date" />
+                              <TableColumn fx:id="req_disease" prefWidth="63.0" text="Disease" />
+                              <TableColumn fx:id="req_status" prefWidth="64.0" text="Status" />
+                              <TableColumn fx:id="req_username" prefWidth="67.0" text="Username" />
+                              <TableColumn fx:id="req_mobile" prefWidth="97.0" text="Mobile" />
+                              <TableColumn fx:id="req_gender" prefWidth="60.0" text="Gender" />
+                              <TableColumn fx:id="req_user_blood" prefWidth="84.0" text="User Blood" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Donor's Overview">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tab_donor" layoutX="42.0" layoutY="59.0" prefHeight="400.0" prefWidth="623.0">
+                          <columns>
+                            <TableColumn fx:id="don_id" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="don_username" prefWidth="110.0" text="Username" />
+                              <TableColumn fx:id="don_blood" prefWidth="102.0" text="Blood Group" />
+                              <TableColumn fx:id="don_mobile" prefWidth="130.0" text="Mobile" />
+                              <TableColumn fx:id="don_age" prefWidth="100.0" text="Current Age" />
+                              <TableColumn fx:id="don_gender" prefWidth="103.0" text="Gender" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <styleClass>
+            <String fx:value="tab" />
+            <String fx:value="tab-header-area" />
+            <String fx:value="tab-pane" />
+         </styleClass>
+      </TabPane>
+   </children>
+</AnchorPane>
